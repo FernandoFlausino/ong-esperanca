@@ -1,0 +1,6 @@
+/* Base compartilhada por todas as páginas. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

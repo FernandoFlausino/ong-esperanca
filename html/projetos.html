@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos, campanhas de doação e oportunidades de voluntariado da ONG Esperança.">
+
+    <title>ONG Esperança | Projetos</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../js/main.js"></script>
+</head>
+
+<body>
+    <a href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="cabecalho-interno">
+            <a class="marca" href="#inicio" data-rota
+               aria-label="ONG Esperança — página inicial">
+                <span aria-hidden="true">♥</span>
+                <span>ONG Esperança</span>
+            </a>
+
+            <nav class="navegacao" aria-label="Menu principal">
+                <input
+                    class="menu-toggle"
+                    type="checkbox"
+                    id="menu-toggle"
+                    aria-controls="menu-principal"
+                >
+
+                <label class="menu-icon" for="menu-toggle">
+                    <span aria-hidden="true">☰</span>
+                    <span>Menu</span>
+                </label>
+
+                <ul class="menu" id="menu-principal">
+                    <li>
+                        <a href="#inicio" data-rota>Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#projetos" data-rota aria-current="page">
+                            Projetos
+                        </a>
+                    </li>
+
+                    <li class="item-menu">
+                        <details class="submenu-controle">
+                            <summary>Como ajudar</summary>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#projetos/voluntariado-titulo" data-rota>
+                                        Trabalho voluntário
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#projetos/doacoes-titulo" data-rota>
+                                        Campanhas de doação
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#projetos/financeira-titulo" data-rota>
+                                        Contribuição financeira
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <a href="#cadastro" data-rota>Cadastro</a>
+                    </li>
+                </ul>
+                <a href="#componentes" data-rota>Componentes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <header>
+            <div>
+                <p>Faça parte</p>
+
+                <h1>Nossos projetos</h1>
+
+                <p>
+                    Conheça as frentes de atuação e escolha
+                    como deseja contribuir.
+                </p>
+            </div>
+        </header>
+
+        <section aria-labelledby="voluntariado-titulo">
+            <div>
+                <div>
+                    <p>Doe seu tempo</p>
+
+                    <h2 id="voluntariado-titulo">
+                        Trabalho voluntário
+                    </h2>
+
+                    <p>
+                        Os voluntários colaboram conforme sua
+                        disponibilidade e suas habilidades.
+                    </p>
+
+                    <ul>
+                        <li>Apoio na organização de eventos</li>
+                        <li>Separação de alimentos e materiais</li>
+                        <li>Atendimento e orientação à comunidade</li>
+                        <li>Participação em atividades educativas</li>
+                    </ul>
+
+                    <a class="botao" href="#cadastro/participacao" data-rota>
+                        Quero ser voluntário
+                    </a>
+                </div>
+
+                <aside aria-labelledby="como-funciona">
+                    <h3 id="como-funciona">Como funciona</h3>
+
+                    <ol>
+                        <li>Preencha o cadastro.</li>
+                        <li>Escolha trabalho voluntário.</li>
+                        <li>Aguarde o contato da equipe.</li>
+                    </ol>
+
+                    <p>
+                        Nesta versão acadêmica, o cadastro é
+                        demonstrativo e não envia dados.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <section aria-labelledby="doacoes-titulo">
+            <div>
+                <p>Contribua com recursos</p>
+
+                <h2 id="doacoes-titulo">
+                    Campanhas de doação
+                </h2>
+
+                <div data-cards="doacoes">
+                    <article>
+                        <h3>Alimentos</h3>
+
+                        <p>
+                            Recebemos produtos não perecíveis,
+                            dentro do prazo de validade e em
+                            embalagens fechadas.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Roupas e cobertores</h3>
+
+                        <p>
+                            As peças devem estar limpas, conservadas
+                            e adequadas para uso.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Materiais escolares</h3>
+
+                        <p>
+                            Cadernos, lápis, mochilas e outros materiais
+                            novos ou em bom estado.
+                        </p>
+                    </article>
+                </div>
+
+                <div>
+                    <a class="botao" href="#cadastro/participacao" data-rota>
+                        Quero realizar uma doação
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="financeira-titulo">
+            <div>
+                <p>Contribuição financeira</p>
+
+                <h2 id="financeira-titulo">
+                    Ajude a manter as ações
+                </h2>
+
+                <p>
+                    As contribuições financeiras são utilizadas na
+                    compra de materiais e na manutenção dos projetos.
+                    Para receber os dados de doação com segurança,
+                    entre em contato com a equipe.
+                </p>
+
+                <a class="botao" href="#inicio/contato" data-rota>
+                    Solicitar dados para doação
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy; 2026 ONG Esperança. Projeto acadêmico.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

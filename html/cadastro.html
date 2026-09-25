@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastro de voluntários e doadores da ONG Esperança.">
+
+    <title>ONG Esperança | Cadastro</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../js/main.js"></script>
+</head>
+
+<body>
+    <a href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="cabecalho-interno">
+            <a class="marca" href="#inicio" data-rota
+               aria-label="ONG Esperança — página inicial">
+                <span aria-hidden="true">♥</span>
+                <span>ONG Esperança</span>
+            </a>
+
+            <nav class="navegacao" aria-label="Menu principal">
+                <input
+                    class="menu-toggle"
+                    type="checkbox"
+                    id="menu-toggle"
+                    aria-controls="menu-principal"
+                >
+
+                <label class="menu-icon" for="menu-toggle">
+                    <span aria-hidden="true">☰</span>
+                    <span>Menu</span>
+                </label>
+
+                <ul class="menu" id="menu-principal">
+                    <li>
+                        <a href="#inicio" data-rota>Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#projetos" data-rota>Projetos</a>
+                    </li>
+
+                    <li class="item-menu">
+                        <details class="submenu-controle">
+                            <summary>Como ajudar</summary>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#projetos/voluntariado-titulo" data-rota>
+                                        Trabalho voluntário
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#projetos/doacoes-titulo" data-rota>
+                                        Campanhas de doação
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#projetos/financeira-titulo" data-rota>
+                                        Contribuição financeira
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <a href="#cadastro" data-rota aria-current="page">
+                            Cadastro
+                        </a>
+                    </li>
+                </ul>
+                <a href="#componentes" data-rota>Componentes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <header>
+            <div>
+                <p>Participe</p>
+
+                <h1>Cadastro</h1>
+
+                <p>
+                    Preencha os campos abaixo para demonstrar seu
+                    interesse. Campos marcados com * são obrigatórios.
+                </p>
+
+                <p id="aviso-demonstracao">
+                    Formulário demonstrativo: os dados não são enviados
+                    nem armazenados. Digite CPF, telefone e CEP com
+                    a pontuação indicada.
+                </p>
+            </div>
+        </header>
+
+        <section aria-labelledby="titulo-formulario">
+            <div>
+                <h2 id="titulo-formulario">
+                    Formulário de participação
+                </h2>
+
+                <!--
+                    method="dialog" permite testar a validação nativa
+                    sem enviar os dados para um servidor.
+                    O formulário está fora de um dialog, portanto
+                    não fecha nenhuma janela nem gera confirmação.
+                -->
+                <form
+                    id="form-cadastro"
+                    method="dialog"
+                    aria-describedby="aviso-demonstracao"
+                >
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+
+                        <div>
+                            <div>
+                                <label for="nome">Nome completo *</label>
+
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    autocomplete="name"
+                                    minlength="3"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="email">E-mail *</label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    autocomplete="email"
+                                    placeholder="nome@exemplo.com"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="nascimento">
+                                    Data de nascimento *
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="nascimento"
+                                    name="nascimento"
+                                    autocomplete="bday"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="cpf">CPF *</label>
+
+                                <input
+                                    type="text"
+                                    id="cpf"
+                                    name="cpf"
+                                    autocomplete="off"
+                                    placeholder="000.000.000-00"
+                                    maxlength="14"
+                                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                    aria-describedby="ajuda-cpf"
+                                    title="Digite o CPF no formato 000.000.000-00."
+                                    required
+                                >
+
+                                <small id="ajuda-cpf">
+                                    Formato: 000.000.000-00.
+                                    A validação verifica somente o formato.
+                                </small>
+                            </div>
+
+                            <div>
+                                <label for="telefone">Telefone *</label>
+
+                                <input
+                                    type="tel"
+                                    id="telefone"
+                                    name="telefone"
+                                    autocomplete="tel"
+                                    placeholder="(00) 00000-0000"
+                                    maxlength="15"
+                                    pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+                                    aria-describedby="ajuda-telefone"
+                                    title="Digite o telefone com DDD, como (48) 99999-9999 ou (48) 3333-3333."
+                                    required
+                                >
+
+                                <small id="ajuda-telefone">
+                                    Formato: (00) 00000-0000
+                                    ou (00) 0000-0000.
+                                </small>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div>
+                            <div>
+                                <label for="endereco">Endereço *</label>
+
+                                <input
+                                    type="text"
+                                    id="endereco"
+                                    name="endereco"
+                                    autocomplete="street-address"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="cidade">Cidade *</label>
+
+                                <input
+                                    type="text"
+                                    id="cidade"
+                                    name="cidade"
+                                    autocomplete="address-level2"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="estado">Estado *</label>
+
+                                <select
+                                    id="estado"
+                                    name="estado"
+                                    autocomplete="address-level1"
+                                    required
+                                >
+                                    <option value="">Selecione</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="SC">Santa Catarina</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="cep">CEP *</label>
+
+                                <input
+                                    type="text"
+                                    id="cep"
+                                    name="cep"
+                                    autocomplete="postal-code"
+                                    placeholder="00000-000"
+                                    maxlength="9"
+                                    pattern="\d{5}-\d{3}"
+                                    aria-describedby="ajuda-cep"
+                                    title="Digite o CEP no formato 00000-000."
+                                    required
+                                >
+
+                                <small id="ajuda-cep">
+                                    Formato: 00000-000.
+                                </small>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="participacao">
+                        <legend>Forma de participação</legend>
+
+                        <p>Escolha uma opção: *</p>
+
+                        <div>
+                            <label for="voluntariado">
+                                <input
+                                    type="radio"
+                                    id="voluntariado"
+                                    name="participacao"
+                                    value="voluntariado"
+                                    required
+                                >
+
+                                <span>
+                                    <strong>Trabalho voluntário</strong>
+
+                                    <small>
+                                        Quero oferecer meu tempo
+                                        e minhas habilidades.
+                                    </small>
+                                </span>
+                            </label>
+
+                            <label for="doacao">
+                                <input
+                                    type="radio"
+                                    id="doacao"
+                                    name="participacao"
+                                    value="doacao"
+                                >
+
+                                <span>
+                                    <strong>Realizar uma doação</strong>
+
+                                    <small>
+                                        Quero contribuir com materiais
+                                        ou recursos.
+                                    </small>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <label for="mensagem">
+                            Mensagem <span>(opcional)</span>
+                        </label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            maxlength="500"
+                            placeholder="Conte um pouco sobre como deseja participar."
+                        ></textarea>
+                    </div>
+
+                    <label for="consentimento">
+                        <input
+                            type="checkbox"
+                            id="consentimento"
+                            name="consentimento"
+                            value="aceito"
+                            required
+                        >
+
+                        <span>
+                            Concordo com o uso dos dados para contato
+                            relacionado às ações da ONG. *
+                        </span>
+                    </label>
+
+                    <button type="submit">
+                        Verificar preenchimento
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy; 2026 ONG Esperança. Projeto acadêmico.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

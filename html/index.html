@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a ONG Esperança e suas ações comunitárias.">
+
+    <title>ONG Esperança | Início</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../js/main.js"></script>
+</head>
+
+<body>
+    <a href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="cabecalho-interno">
+            <a class="marca" href="#inicio" data-rota
+               aria-label="ONG Esperança — página inicial">
+                <span aria-hidden="true">♥</span>
+                <span>ONG Esperança</span>
+            </a>
+
+            <nav class="navegacao" aria-label="Menu principal">
+                <input
+                    class="menu-toggle"
+                    type="checkbox"
+                    id="menu-toggle"
+                    aria-controls="menu-principal"
+                >
+
+                <label class="menu-icon" for="menu-toggle">
+                    <span aria-hidden="true">☰</span>
+                    <span>Menu</span>
+                </label>
+
+                <ul class="menu" id="menu-principal">
+                    <li>
+                        <a href="#inicio" data-rota aria-current="page">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#projetos" data-rota>Projetos</a>
+                    </li>
+
+                    <li class="item-menu">
+                        <details class="submenu-controle">
+                            <summary>Como ajudar</summary>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#projetos/voluntariado-titulo" data-rota>
+                                        Trabalho voluntário
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#projetos/doacoes-titulo" data-rota>
+                                        Campanhas de doação
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#projetos/financeira-titulo" data-rota>
+                                        Contribuição financeira
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <a href="#cadastro" data-rota>Cadastro</a>
+                    </li>
+                </ul>
+                <a href="#componentes" data-rota>Componentes</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="preferencias-visuais" aria-label="Preferência visual">
+        <button type="button" id="alternar-tema" aria-pressed="false">Tema escuro: desativado</button>
+        <span id="estado-tema" role="status"></span>
+    </div>
+
+    <p id="estado-navegacao" role="status"></p>
+    <div id="conteudo-principal" aria-busy="false">
+    <main id="conteudo" tabindex="-1">
+        <section aria-labelledby="titulo-principal">
+            <div>
+                <div>
+                    <p>Juntos pela comunidade</p>
+
+                    <h1 id="titulo-principal">
+                        Pequenas ações transformam vidas
+                    </h1>
+
+                    <p>
+                        A ONG Esperança apoia famílias em situação de
+                        vulnerabilidade por meio de campanhas, atividades
+                        educativas e trabalho voluntário.
+                    </p>
+
+                    <div>
+                        <a class="botao" href="#projetos" data-rota>Conheça os projetos</a>
+                        <a class="botao" href="#cadastro" data-rota>Quero participar</a>
+                    </div>
+                </div>
+
+                <picture>
+                    <source
+                        srcset="../imagens/voluntarios.webp"
+                        type="image/webp"
+                    >
+
+                    <img
+                        src="../imagens/voluntarios.png"
+                        alt="Grupo de voluntários organizando caixas com alimentos e materiais escolares em um centro comunitário"
+                        width="1774"
+                        height="887"
+                    >
+                </picture>
+            </div>
+        </section>
+
+        <section aria-labelledby="sobre-titulo">
+            <div>
+                <p>Quem somos</p>
+
+                <h2 id="sobre-titulo">Sobre a ONG</h2>
+
+                <p>
+                    A ONG Esperança é uma organização fictícia criada para
+                    esta atividade acadêmica. Sua missão é fortalecer a
+                    comunidade, incentivar a solidariedade e oferecer
+                    apoio a quem mais precisa.
+                </p>
+            </div>
+        </section>
+
+        <section aria-labelledby="atuacao-titulo">
+            <div>
+                <p>Nossa atuação</p>
+
+                <h2 id="atuacao-titulo">Como ajudamos</h2>
+
+                <div data-cards="atuacao">
+                    <article>
+                        <span aria-hidden="true">✦</span>
+
+                        <h3>Campanhas solidárias</h3>
+
+                        <p>
+                            Arrecadação de alimentos, roupas e materiais
+                            escolares para famílias da comunidade.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span aria-hidden="true">●</span>
+
+                        <h3>Ações educativas</h3>
+
+                        <p>
+                            Atividades que promovem aprendizagem,
+                            convivência e desenvolvimento social.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span aria-hidden="true">♥</span>
+
+                        <h3>Rede de voluntários</h3>
+
+                        <p>
+                            Pessoas que oferecem tempo e conhecimento
+                            para apoiar nossas ações.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" aria-labelledby="contato-titulo">
+            <div>
+                <div>
+                    <p>Fale conosco</p>
+
+                    <h2 id="contato-titulo">Entre em contato</h2>
+
+                    <p>
+                        Tem alguma dúvida? Nossa equipe está pronta
+                        para conversar.
+                    </p>
+
+                    <p>
+                        Os contatos abaixo são ilustrativos para
+                        esta atividade acadêmica.
+                    </p>
+                </div>
+
+                <address>
+                    <p>
+                        <strong>E-mail:</strong>
+
+                        <a href="mailto:contato@ongesperanca.org">
+                            contato@ongesperanca.org
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Telefone:</strong>
+
+                        <a href="tel:+5548999999999">
+                            (48) 99999-9999
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Localização:</strong>
+                        Santa Catarina, Brasil
+                    </p>
+                </address>
+            </div>
+        </section>
+    </main>
+    </div>
+
+    <footer>
+        <div>
+            <p>&copy; 2026 ONG Esperança. Projeto acadêmico.</p>
+        </div>
+    </footer>
+<noscript><p>Ative o JavaScript para utilizar a navegação deste projeto.</p></noscript>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ONG Esperança | Componentes de feedback</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../js/main.js"></script>
+</head>
+
+<body>
+    <a href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="cabecalho-interno">
+            <a class="marca" href="#inicio" data-rota>
+                <span aria-hidden="true">♥</span>
+                <span>ONG Esperança</span>
+            </a>
+
+            <a href="#inicio" data-rota>Voltar ao início</a>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1" class="pagina-feedback">
+        <header>
+            <div>
+                <p>Comunicação com o usuário</p>
+
+                <h1>Componentes de feedback</h1>
+
+                <p>
+                    Demonstração visual de etiquetas, alertas
+                    e notificações da plataforma.
+                </p>
+
+                <p>
+                    As mensagens abaixo são exemplos.
+                    Nenhum cadastro ou doação foi realizado.
+                </p>
+            </div>
+        </header>
+
+        <!-- ETIQUETAS -->
+        <section aria-labelledby="titulo-etiquetas">
+            <h2 id="titulo-etiquetas">Etiquetas dos projetos</h2>
+
+            <div class="grade-exemplos">
+                <article>
+                    <span class="badge badge-sucesso">
+                        Em andamento
+                    </span>
+
+                    <h3>Campanha de alimentos</h3>
+
+                    <p>
+                        Arrecadação de alimentos não perecíveis
+                        para famílias da comunidade.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="badge badge-destaque">
+                        Arrecadação aberta
+                    </span>
+
+                    <h3>Materiais escolares</h3>
+
+                    <p>
+                        Recebimento de cadernos, lápis e mochilas
+                        em bom estado.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="badge badge-neutra">
+                        Encerrado
+                    </span>
+
+                    <h3>Campanha de inverno</h3>
+
+                    <p>
+                        Exemplo de campanha com período
+                        de arrecadação finalizado.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ALERTAS ESTÁTICOS DE DEMONSTRAÇÃO -->
+        <section aria-labelledby="titulo-alertas">
+            <h2 id="titulo-alertas">Caixas de alerta</h2>
+
+            <div class="lista-alertas">
+                <div class="alerta alerta-info">
+                    <span class="alerta-icone" aria-hidden="true">ⓘ</span>
+
+                    <div>
+                        <h3>Informação</h3>
+
+                        <p>
+                            Para participar, preencha os campos
+                            obrigatórios do formulário.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alerta alerta-sucesso">
+                    <span class="alerta-icone" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h3>Exemplo de sucesso</h3>
+
+                        <p>
+                            Seus dados foram recebidos.
+                            Esta é uma mensagem ilustrativa.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alerta alerta-erro">
+                    <span class="alerta-icone" aria-hidden="true">!</span>
+
+                    <div>
+                        <h3>Revise o preenchimento</h3>
+
+                        <p>
+                            Exemplo de erro: informe o telefone
+                            com DDD no formato (00) 00000-0000.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOAST DE DEMONSTRAÇÃO, SEM JAVASCRIPT -->
+        <section aria-labelledby="titulo-notificacao">
+            <h2 id="titulo-notificacao">Notificação tipo toast</h2>
+
+            <p>
+                Clique abaixo para visualizar uma notificação.
+                Ela permanece aberta até você fechá-la.
+            </p>
+
+            <details class="toast-demo">
+                <summary>
+                    <span class="texto-mostrar">Mostrar notificação</span>
+                    <span class="texto-fechar">Fechar notificação</span>
+                </summary>
+
+                <div class="toast" role="status" aria-atomic="true">
+                    <span class="toast-icone" aria-hidden="true">✓</span>
+
+                    <div>
+                        <p class="toast-titulo">
+                            Exemplo de confirmação
+                        </p>
+
+                        <p>
+                            Sua participação faz a diferença!
+                            Esta notificação é uma demonstração visual.
+                        </p>
+                    </div>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy; 2026 ONG Esperança. Projeto acadêmico.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
