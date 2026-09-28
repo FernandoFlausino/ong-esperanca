@@ -1346,3 +1346,18 @@ body.tema-escuro article > span[aria-hidden="true"] {
     color: var(--color-danger);
     font-size: var(--font-size-caption);
 }
+
+/* Link de acessibilidade para pular diretamente ao conteúdo principal. */
+.link-pular {
+    position: absolute;
+    left: var(--espaco-3);
+    top: -100px;
+    padding: var(--espaco-2) var(--espaco-3);
+    background: var(--color-primary-dark);
+    color: var(--color-on-dark);
+    z-index: 1000;
+}
+
+.link-pular:focus {
+    top: var(--espaco-3);
+}
