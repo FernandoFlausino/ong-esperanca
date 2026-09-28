@@ -12,6 +12,7 @@ if (Object.hasOwn(paginas, pagina)) {
         nomesRotas.includes(hash.split('/')[0]) ? hash : `${paginas[pagina]}/${hash}`;
     location.replace(`index.html#${rota}`);
 } else if (document.querySelector('#conteudo-principal')) {
+     // Inicializa os módulos principais da aplicação.
     iniciarPreferencias();
     iniciarFormulario();
     iniciarRoteador();
