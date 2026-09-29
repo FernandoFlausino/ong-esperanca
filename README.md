@@ -81,3 +81,11 @@ Adicionei regras para rejeitar nome, cidade e endereço compostos apenas por esp
 Os erros aparecem junto aos campos com `aria-describedby`, `aria-invalid` e as classes `campo-erro`/`campo-sucesso`. As orientações já existentes são preservadas. Alterar um campo remove a confirmação anterior. A mensagem de falha de rede foi traduzida e o título muda quando há erro de navegação.
 
 Consulte `VALIDACAO.md` para resultados e limitações. Para executar os testes simulados com Node.js, abra um terminal na pasta `testes` e execute `node validar-spa.mjs`, `node preferencias.mjs` e `node componentes.mjs`. Esses testes não utilizam um navegador real.
+
+## Versões do projeto
+
+### v1.0.0
+Primeira versão estável do projeto, reunindo as páginas em HTML, os estilos em CSS e as funcionalidades em JavaScript.
+
+### v1.1.0
+Fiz melhorias na validação do formulário para deixar as mensagens de erro e o preenchimento dos campos mais claros para o usuário.
