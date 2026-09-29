@@ -63,9 +63,35 @@ export function iniciarFormulario() {
     function editar(evento) {
         const campo = evento.target;
         if (!pertence(campo)) return;
+
         campo.form.querySelector('[data-feedback]')?.remove();
-        conferir(campo, false);
+
+        // Limpa o estado anterior enquanto o usuário altera o campo.
+        campo.classList.remove('campo-erro', 'campo-sucesso');
+        campo.removeAttribute('aria-invalid');
+
+        const idErro = `erro-${campo.id}`;
+        const mensagem = document.getElementById(idErro);
+
+        if (mensagem) {
+        mensagem.remove();
+
+        const descricoes = new Set(
+            (campo.getAttribute('aria-describedby') || '')
+                .split(/\s+/)
+                .filter(Boolean)
+        );
+
+        descricoes.delete(idErro);
+
+        if (descricoes.size) {
+            campo.setAttribute('aria-describedby', [...descricoes].join(' '));
+        } else {
+            campo.removeAttribute('aria-describedby');
+        }
     }
+}
+
     document.addEventListener('input', editar);
     document.addEventListener('change', editar);
     document.addEventListener('focusout', (evento) => {
