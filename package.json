@@ -1,0 +1,27 @@
+{
+  "name": "ong-esperanca",
+  "version": "1.0.0",
+  "description": "Desenvolvi este projeto acadêmico com HTML5, CSS e JavaScript. A proposta é apresentar a ONG Esperança, suas campanhas e as formas de participação.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandoFlausino/ong-esperanca.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/FernandoFlausino/ong-esperanca/issues"
+  },
+  "homepage": "https://github.com/FernandoFlausino/ong-esperanca#readme",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}
